@@ -1,0 +1,149 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Body reset
+// -------------------------
+body {
+  margin: 0;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @textColor;
+  background: @bodyBackground;
+  #font .smoothing();
+}
+// Links
+// -------------------------
+a {
+  color: @linkColor;
+  text-decoration: none;
+  .btn { text-decoration: none; }
+}
+a:hover {
+  color: @linkColorHover;
+  text-decoration: underline;
+  .btn { text-decoration: none; }
+}
+
+p {
+    padding: 0;
+    margin: 0 0 @baseLineHeight 0;
+}
+
+// Emphasis & misc
+// -------------------------
+
+small {
+  font-size: 85%; // Ex: 14px base font * 85% = about 12px
+}
+strong {
+  font-weight: 600;
+}
+em {
+  font-style: italic;
+}
+cite {
+  font-style: normal;
+}
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 @baseLineHeight 0;
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  line-height: normal;
+  color: @headingsColor;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: @gray;
+  }
+}
+h1 { font-size: 60px; }
+h2 { font-size: 30px; font-weight: normal;  }
+h3 { font-size: 16px; font-weight: normal; }
+h4 { font-size: 14px; font-weight: 400; text-transform: uppercase; }
+h5 { font-size: 14px; font-weight: 400; font-style: italic;  }
+h6 { font-size: 12px; font-weight: 400; text-transform: uppercase; line-height: @baseLineHeight; }
+
+h1 small { font-size: 85%; }
+h2 { 
+    small { font-size: 85%; text-transform: none; } 
+    strong, b { font-weight: 600; }
+}
+h3 small { font-size: 85%; }
+h4 small { font-size: 85%; }
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+  padding: 0;
+  margin: 0 0 @baseLineHeight 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: @baseLineHeight;
+}
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+  li {  padding-left: 0; }
+}
+
+// Description Lists
+dl {
+  margin-bottom: @baseLineHeight;
+}
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: @baseLineHeight / 2;
+}
+
+// MISC
+// ----
+
+// Horizontal rules
+hr {
+  margin: @baseLineHeight 0;
+  border: 0;
+  border-top: 1px solid @grayLight;
+  border-bottom: 1px solid @grayLightest;
+}
+.vr {  
+    margin: 0; padding: 0; font-size: 0; line-height: 0;
+    width: 1px;
+    border-left: 1px solid @grayLight;
+    background: @grayLightest;
+}
+
+// Addresses
+address {
+  display: block;
+  margin-bottom: @baseLineHeight;
+  font-style: normal;
+  line-height: @baseLineHeight;
+}
+
+.highlight-purple {
+	color: @purple;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+}

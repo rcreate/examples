@@ -1,0 +1,20 @@
+<h2>Steckbrief</h2>
+<article class="row fact" ng-repeat="area in items">
+	<div class="col-sm-12">
+		<h3 class="header">{{area.header}}</h3>
+		<div class="indent">
+			<table>
+				<tr ng-repeat="fact in area.facts">
+					<th>{{fact.title}}</th>
+					<td>
+						<a href="http://{{fact.url}}" ng-if="fact.url!==''" target="blank">{{fact.url}}</a>
+						<a href="mailto:{{fact.mailto}}" ng-if="fact.mailto!==''">{{fact.mailto}}</a>
+						<span ng-if="fact.value!==''">{{fact.value}}</span>
+						<span ng-if="fact.values"><span class="tag" ng-repeat="tag in fact.values">{{tag}}</span></span>
+					</td>
+					<td ng-if="fact.values"></td>
+				</tr>
+			</table>
+		</div>
+	</div><div class="clearfix"></div>
+</article>
